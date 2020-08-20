@@ -1,5 +1,5 @@
 import unittest
-import current_standings
+import moto_scraper
 
 class GetCurrentStandingsTest(unittest.TestCase):
 
@@ -7,7 +7,7 @@ class GetCurrentStandingsTest(unittest.TestCase):
         """
         Test that every rider has the correct type for each variable
         """
-        standings = get_current_standings.GetCurrentStandings()
+        standings = moto_scraper.GetCurrentStandings()
         for rider in standings:
             self.assertIsInstance(rider.get_name(), str)
             self.assertIsInstance(rider.get_number(), int)

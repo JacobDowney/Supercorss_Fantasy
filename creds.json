@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "supercrossfantasy",
+  "private_key_id": "06f9461bb34edb54fb621d90dae2b64ffb391c16",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCn8mV+m6QmFNAr\nYeoQPEnQNfSCna0TakaA8OpZEAPDT9XxYLYhpP44BA0Wt/YLHYnKaE9xcSfW+FkQ\nILQ6nHK1PdwOM4WxfK84/H7oe0bos8HlkQwTyhzvXSe29ZDcXRgJ2/2OCbteoTGc\n7q6cwz+WTHmkwL1ez07okE5yR043hdOBoI6liR+o3Pvc4M9XsXRrwgd7aKW451bu\n1qc/sohB1UIvTU3umBQKOZ+gHYUtk4JMTj89Jg68nFnVqTxZuq9Xlpvh2Y8EkLjb\nfSTN2eDa9q8cjE7xpgeUrgivSwpJ5MwxBGtZNYK71azjTH7o4KxDfwSYMQ9/lSck\nrwBTxXKdAgMBAAECggEASeDCLuCOY8YSEJNg4EV0/udNKMvtn7XHT98qZ4U48ojD\nBwxQ8hnfTorRqyW/UQJsY6JhF/j72n+ixgps3b+GYh3VGFYnwHylo77GoMPh3Gl+\nqNqWYnotIkprNvts/tLgyS2BqyKyzpy/81W3b/Qfm6EGfaffZb5x6rHYIEMnsBoy\nrvhdhtGx4Z337fGeM9ujAIGNsktp5jmEFjQUyBbi+gfS4Ti1EfVM1nSdHVLjQCC1\n422xUMT78TfP73EFUWh7d5Hb6aQdwFXTcM/T/8z9ZKZbHxPgbIjBL+mHMgiGdG+9\nmZ791t33rdRBnteH5yzj/+ICWjiRGoM1bnvNeWOz7QKBgQDdd5hSdkZoHzJiL0wT\nZgrBrUTgPnpl6nO1g4JOpoW8+sUEZG0zAqcmUW1pYSzeO8sm/Fdb05SGWHi9k6C1\nA1hagH5Tkrr9393jZoBvsxtm0AMOw4gWxN/Y6f2TgsxJc36IoZQpGvbK8LqHCAKU\nwd9wRSrr4CzeJl3oZKmzSroh5wKBgQDCImg9nNZSdF1gHDGSC0xB19qc6FSWwxlz\nsKUVK9/pL5z/iyyhRPNPa9TI7OXwFF7RgNNaYb4akjFUGyqKfrEkXTb1WSB5AO8T\nzmop0SEfUc6XEr2XvwHt1lPvw++s26ML/IO4Ml2GyWkZ11X3jggkMn0+gD39TWuj\nJkVuqXe+2wKBgH3f2Kqd4NyTRq65lTK9X8W+9pPBzw2YGRYE3g5X5VGI8mvRrKM+\nkcRcqaQogDj7oTbSW9CsTBGjvVR60O+xLAmcWLCliDR9hf8Wpk9WbG+eMO62QeY3\nFceTDvZFdFkXFMcRl0VZtwWXl1ziN51XJ+kG1yNjsfy9r8hDVpS6F1rnAoGBALvK\nErG+2+co3wZQX3cZbKuohLURXHn1wdISRq5DIbZss17SntplW0MxWMT/u7FP0ySv\njEM6l20Wi5cDLFSKFwrJDJeqnmnOiHXNTw6iWHr2ZHPo0fNO9iu+DrW5AEhiscav\nfi8YsTXn8L3peiQchS2WlWZ3IP+8+2j3ZWSVk9rPAoGAeKtAyJnYyFirQbecOvUK\njIdL18KcO7s6EMPP1o6U1XhJcHjWzUkfSGpl+CBBOMebZq6VinzcPnvG2SJShTxf\nsIlfwYQHkSVGcIDjeOndZr/danvHFs5gIG+luWfgCoXqwlnC5jqsE0ePdFouCJac\nsr/HBUK+1IpM+Ebd+0UyI1U=\n-----END PRIVATE KEY-----\n",
+  "client_email": "jacobdowney@supercrossfantasy.iam.gserviceaccount.com",
+  "client_id": "100787780777873065949",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/jacobdowney%40supercrossfantasy.iam.gserviceaccount.com"
+}

@@ -40,3 +40,43 @@ class Rider:
 
     def get_active(self):
         return self.active
+
+
+class Player:
+    def __init__(self, name, points, picks, pick_lcq, pick_250):
+        self.name = name
+        self.points = points
+        self.picks = picks
+        self.pick_lcq = pick_lcq
+        self.pick_250 = pick_250
+
+    def get_name(self):
+        return self.name
+
+    def get_points(self):
+        return self.points
+
+    def get_picks(self):
+        return self.picks
+
+    def get_pick_lcq(self):
+        return self.pick_lcq
+
+    def get_pick_250(self):
+        return self.pick_250
+
+
+class RaceData:
+    def __init__(self, title, event, session):
+        self.title = title
+        self.event = event
+        self.session = session
+
+    def get_title(self):
+        return self.title
+
+    def get_event(self):
+        return self.event
+
+    def get_session(self):
+        return self.session
