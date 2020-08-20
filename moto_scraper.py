@@ -3,9 +3,33 @@ from bs4 import BeautifulSoup
 import json
 
 import consts
-import rider
 
-def GetCurrentStatus():
+class Rider:
+    def __init__(self, name, number, position, laps, gap, diff, last, best, in_, active):
+        self.name = name
+        self.number = number
+        self.position = position
+        self.laps = laps
+        self.gap = gap
+        self.diff = diff
+        self.last = last
+        self.best = best
+        self.in_ = in_
+        self.active = active
+
+class RaceData:
+    def __init__(self, title, event, session):
+        self.title = title
+        self.event = event
+        self.session = session
+
+    def __init__(self, race_data_info):
+        self.title = race_data_info['t']
+        self.event = race_data_info['e']
+        self.session = race_data_info['s']
+
+
+def GetStatus():
     url = consts.race_data_url
     race_data_json = json.loads(requests.get(url).content)
     status = race_data_json['B']
@@ -13,18 +37,18 @@ def GetCurrentStatus():
         return consts.status_complete
     return consts.status_unknown
 
-def GetCurrentEvent():
+def GetRaceData():
     url = consts.xml_url
     soup = BeautifulSoup(requests.get(url).content, "html.parser")
-    event_info = soup.find_all("a")
+    race_data_info = soup.find_all("a")[0]
+    return RaceData(race_data_info)
 
-def GetCurrentStandings():
+def GetStandings():
     url = consts.xml_url
     soup = BeautifulSoup(requests.get(url).content, "html.parser")
     rider_infos = soup.find_all("b")
     riders = []
-    for i in range(0, len(rider_infos)):
-        rider_info = rider_infos[i]
+    for rider_info in rider_infos:
         name = rider_info['f']
         number = int(rider_info['n'])
         position = int(rider_info['a'])
@@ -35,8 +59,8 @@ def GetCurrentStandings():
         best = format_time(rider_info['bl'])
         in_ = int(rider_info['in'])
         active = rider_info['s'] == "Active"
-        newRider = types.Rider(name, number, position, laps, gap, diff, last, best, in_, active)
-        riders.append(newRider)
+        rider = Rider(name, number, position, laps, gap, diff, last, best, in_, active)
+        riders.append(rider)
     return riders
 
 def format_time(time):

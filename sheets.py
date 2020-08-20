@@ -2,7 +2,15 @@ import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 
 import consts
-import types
+
+class Player:
+    def __init__(self, name, points, picks, pick_lcq, pick_250):
+        self.name = name
+        self.points = points
+        self.picks = picks
+        self.pick_lcq = pick_lcq
+        self.pick_250 = pick_250
+
 
 def GetPlayers():
     sheet = get_sheet()
