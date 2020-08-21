@@ -18,11 +18,6 @@ class Rider:
         self.active = active
 
 class RaceData:
-    def __init__(self, title, event, session):
-        self.title = title
-        self.event = event
-        self.session = session
-
     def __init__(self, race_data_info):
         self.title = race_data_info['t']
         self.event = race_data_info['e']
@@ -43,11 +38,21 @@ def GetRaceData():
     race_data_info = soup.find_all("a")[0]
     return RaceData(race_data_info)
 
-def GetStandings():
+def GetInitialRiders():
     url = consts.xml_url
     soup = BeautifulSoup(requests.get(url).content, "html.parser")
     rider_infos = soup.find_all("b")
-    riders = []
+    riders = {}
+    for rider_info in rider_infos:
+        name = rider_info['f']
+        riders[name] = Rider(name, None, 0, None, None, None, None, None, None, None)
+    return riders
+
+def GetRiders():
+    url = consts.xml_url
+    soup = BeautifulSoup(requests.get(url).content, "html.parser")
+    rider_infos = soup.find_all("b")
+    riders = {}
     for rider_info in rider_infos:
         name = rider_info['f']
         number = int(rider_info['n'])
@@ -59,8 +64,7 @@ def GetStandings():
         best = format_time(rider_info['bl'])
         in_ = int(rider_info['in'])
         active = rider_info['s'] == "Active"
-        rider = Rider(name, number, position, laps, gap, diff, last, best, in_, active)
-        riders.append(rider)
+        riders[name] = Rider(name, number, position, laps, gap, diff, last, best, in_, active)
     return riders
 
 def format_time(time):

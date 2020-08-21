@@ -19,3 +19,9 @@ xml_url = motocross_xml_url
 race_data_url = motorcross_race_data_url
 announcements_url = motorcross_announcements_url
 timer_url = motorcross_timer_url
+
+update_interval_seconds = 5
+points = [0, 26, 23, 21, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+
+sheet_picks = "picks"
+sheet_results = "results"
