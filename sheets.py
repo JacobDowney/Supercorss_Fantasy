@@ -43,6 +43,7 @@ def SetPlayerPicks(player_picks):
         sheet.update_cell(3, i, 0)
         sheet.update_cell(4, i, player_pick.pick_250)
         sheet.update_cell(5, i, 0)
+        # Nothing for sheet cell 6
         sheet.update_cell(7, i, player_pick.picks[0])
         sheet.update_cell(8, i, 0)
         sheet.update_cell(9, i, player_pick.picks[1])
@@ -52,6 +53,14 @@ def SetPlayerPicks(player_picks):
         sheet.update_cell(13, i, player_pick.picks[3])
         sheet.update_cell(14, i, 0)
         sheet.update_cell(18, i, player_pick.points)
+    sheet.update_cell(1, len(player_picks)+3, consts.leaderboard)
+    sheet.update_cell(1, len(player_picks)+4, consts.timing_names)
+    sheet.update_cell(1, len(player_picks)+5, consts.timing_times)
+
+def SetInfoBoards():
+    sheet = get_sheet(consts.sheet_results)
+    num_players = len(sheet.row_values(1)) - 1
+
 
 def CompleteUpdates(updates):
     sheet = get_sheet(consts.sheet_results)
@@ -69,3 +78,5 @@ def get_sheet(sheet_name):
     creds = ServiceAccountCredentials.from_json_keyfile_name("creds.json", scope)
     client = gspread.authorize(creds)
     return client.open(consts.sheet_name).worksheet(sheet_name)
+
+SetInfoBoards()
